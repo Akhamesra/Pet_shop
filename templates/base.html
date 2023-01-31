@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}- FlaskApp</title>
+    <style>
+        nav a {
+            background-color: #e9e9e9;
+            font-size: 2em;
+            margin-left: 50px;
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        table, th, td {   
+         padding: 10px ;
+         text-align: center;
+         border: 1px solid ;
+         border-collapse: collapse;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('create') }}">Add Pet</a>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <div>
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
