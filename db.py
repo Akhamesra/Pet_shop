@@ -20,7 +20,7 @@ class DBconnection:
 
     @classmethod
     def create_table(self,tablename,f1,f2,f3,):
-        self.cur.execute('DROP TABLE IF EXISTS ' + str(tablename))
+        #self.cur.execute('DROP TABLE IF EXISTS ' + str(tablename))
         self.cur.execute('CREATE TABLE '+ str(tablename)+'(id serial PRIMARY KEY,' + str(f1)+ ' varchar (20) NOT NULL,' + str(f2) + ' varchar (20) NOT NULL,' + str(f3) + ' varchar(20) NOT NULL);')
         self.conn.commit()
 
